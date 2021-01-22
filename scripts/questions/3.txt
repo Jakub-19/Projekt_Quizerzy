@@ -1,0 +1,50 @@
+Jak w muzyce nazywa się najwyższy głos żeński?
+Muzyka
+Tenor
+false
+Sopran
+true
+Kontrakt
+false
+Alt
+false
+Ile arów ma hektar?
+Rolnictwo
+150
+false
+50
+false
+100
+true
+1000
+false
+Papiery wartościowe emitowane przez Skarb Państwa to inaczej:
+Ekonomia
+Obligacje skarbowe
+true
+Akcje skarbowe
+false
+Makler
+false
+Bessa
+false
+Sytuacja na rynku, w której występuje tylko jeden producent danego dobra, to:
+Ekonomia
+Substynopol
+false
+Oligopol
+false
+Monopol
+true
+Kartel
+false
+Co oznacza przysłowie "darowanemu koniowi w zęby się nie zagląda"?
+Powiedzenia
+Nie powinniśmy krytykować prezentów, które otrzymujemy
+true
+Nie mówić oszczerstw na innych za ich plecami
+false
+Lepiej mieć czegoś mało niż chcieć czegoś nie do osiągnięcia
+false
+Szanować siebie wzajemnie
+false

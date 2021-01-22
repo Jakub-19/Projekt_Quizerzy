@@ -1,0 +1,50 @@
+Jakie zjawisko jest odwrotne do efektu Peltiera?
+Fizyka
+Efekt Seebecka
+true
+Efekt Dopplera
+false
+Efekt Halla
+false
+Efekt Flynna
+false
+Który z czynników zakaźnych nie zawiera ani DNA, ani RNA?
+Biologia
+bakterie
+false
+wirusy
+false
+grzyby
+false
+priony
+true
+Której powieści nie napisał Fiodor Dostojewski?
+Literatura
+Zbrodnia i kara
+false
+Zmartwychwstanie
+true
+Biesy
+false
+Bracia Karamazow
+false
+W jakim przedziale czasowym rozgrywa się akcja gry "Europa Universalis IV"?
+Gry wideo
+1400-1800
+false
+1444-1821
+true
+1350-1850
+false
+1445-1845
+false
+Który z systemów nie należy do dystrybucji Linuxa?
+Informatyka
+Debian
+false
+Ubuntu
+false
+DOS
+true
+Red Hat
+false
