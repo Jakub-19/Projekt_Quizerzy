@@ -158,7 +158,7 @@ function saveResult(message, level) {
     message += "<br> Możesz zapisać swój wynik:"
     $("#hostText>p").html(message);
 
-    const $form = $('<form action="scripts/saveResult.php" method="post"><label for="nick">Imię: </label><input id="endGameNick" type="text" name="nick"><input type="hidden" name="result" value="' + level + '"><input type="submit" value="Zapisz"></form>');
+    const $form = $('<form action="scripts/saveResult.php" method="post"><label for="nick">Imię: </label><input id="endGameNick" type="text" name="nick" autocomplete="off"><input type="hidden" name="result" value="' + level + '"><input type="submit" value="Zapisz"></form>');
     $("#hostText").append($form);
 }
 
