@@ -47,8 +47,6 @@
 			color: #fdb827;
 		}
 		footer {
-			position: absolute;
-			bottom: 0;
 			color: #f1f1f1;
 			text-shadow: 2px 2px 5px #23120b;
 			font-family: 'Didact Gothic';
@@ -76,16 +74,16 @@
 	
 	<body>
 		<div class="container">
-		<header>
-		<h1 class="text-center">Quizerzy The Game</h1>
-	</header>
-		<main class="row">
-		<div class="col-12 text-center">
-		<a href="game.html" id="playBtn" class="btn text-center fw-bold align-content-center pt-1">Graj</a>
-		</div>
+			<header>
+				<h1 class="text-center">Quizerzy The Game</h1>
+			</header>
+			<main class="row">
+			<div class="col-12 text-center">
+				<a href="game.html" id="playBtn" class="btn text-center fw-bold align-content-center pt-1">Graj</a>
+			</div>
 		<div class="col-12 text-center">
 		<h3>Ranking</h3>
-			<div class="row">
+		<div class="row">
 				<div class="col col-12 justify-content-center text-center">
 				<?php
 				$path = "scripts/results.json";
@@ -156,7 +154,7 @@
 			
 			
 		</main>
-		<footer>
+		<footer class="text-center align-bottom mt-5">
 				By Jakub Wadas & Krzysztof Grzesica
 		</footer>
 		</div>
