@@ -16,8 +16,6 @@ window.addEventListener('load', function () {
         }
     })
 
-    $('[data-toggle="tooltip"]').tooltip()
-
     $("#answerA").on('click', answer);
     $("#answerB").on('click', answer);
     $("#answerC").on('click', answer);
@@ -385,6 +383,7 @@ function askAudience() {
 
     $("#hostText>p").html("Publiczność udzieliła następujących odpowiedzi:");
 
+
     var chartData = [];
 
     for (let i = 0; i < answers.length; i++) {
@@ -405,6 +404,10 @@ function askAudience() {
             }
         ]
     });
+    $("#chart").height(250);
+    $("#chart").hide();
+    
+    $("#chart").fadeIn("slow");
     chart.render();
 }
 
@@ -414,4 +417,7 @@ function clearLifelines() {
     $("#answerB").prop("disabled", false);
     $("#answerC").prop("disabled", false);
     $("#answerD").prop("disabled", false);
+
+    //Public
+    $("#chart").slideUp("slow");
 }
