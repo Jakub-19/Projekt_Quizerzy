@@ -1,16 +1,13 @@
 <?php
 $nick = 'Anonim';
 if(isset($_POST["nick"]))
-    $nick = $_POST["nick"];
+    $nick = substr($_POST["nick"], 0, 20);
 $result = 0;
 if(isset($_POST["result"]))
     $result = $_POST["result"];
 
 if($result > 0)
 {
-    //echo $nick;
-    //echo $result;
-
     $path = "results.json";
     $file = fopen($path, "r");
     $data = fread($file, filesize($path));
