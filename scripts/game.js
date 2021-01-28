@@ -331,7 +331,7 @@ function phoneFriend() {
     });
     $div.append($buttonJakub);
 
-    $("#hostText>p").html("Do którego z przyjacił chcesz zadzwonić?");
+    $("#hostText>p").html("Do którego z przyjaciół chcesz zadzwonić?");
 }
 
 function askAudience() {
