@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
     $("#phoneFriend").one('click', phoneFriend);
     $("#askAudience").one('click', askAudience);
     $("#giveUp").click(giveUp);
-    $("#hostText>p").html("Witaj w grze Milionerzy. Przed Tobą 1 z 12 pytań:");
+    $("#hostText>p").html("Witaj w grze Quizerzy. Przed Tobą 1 z 12 pytań:");
     askQuestion(questions[0]);
 }, true);
 
@@ -78,6 +78,7 @@ function nextQuestion() {
     clearLifelines();
     $("#A" + questionLevel).addClass("answered");
     questionLevel++;
+    $("#questionNumber").focus();
     $("#hostText>p").html("Dobra odpowiedź. Oto kolejne pytanie:");
     askQuestion(questions[questionLevel - 1]);
 }
@@ -156,7 +157,7 @@ function saveResult(message, level) {
     message += "<br> Możesz zapisać swój wynik:"
     $("#hostText>p").html(message);
 
-    const $form = $('<form action="scripts/saveResult.php" method="post"><label for="nick">Imię:</label><input type="text" name="nick"><input type="hidden" name="result" value="' + level + '"><input type="submit" value="Zapisz"></form>');
+    const $form = $('<form action="scripts/saveResult.php" method="post"><label for="nick">Imię: </label><input id="endGameNick" type="text" name="nick"><input type="hidden" name="result" value="' + level + '"><input type="submit" value="Zapisz"></form>');
     $("#hostText").append($form);
 }
 
@@ -252,6 +253,7 @@ function phoneFriend() {
     $(this).prop("disabled", true);
     console.log('Telefon');
 
+
     var q = questions[questionLevel - 1];
     var krzysztof = new Friend("Krzysztof");
     var jakub = new Friend("Jakub");
@@ -259,7 +261,7 @@ function phoneFriend() {
 
     const $div = $("#hostText");
 
-    const $buttonKrzysztof = $("<button>" + "<p>" + krzysztof.name + "<br>IQ: " + krzysztof.Iq + "</button>");
+    const $buttonKrzysztof = $("<button>" + "<img src='images/krzysztof.png' alt='Zdjęcie Krzysztofa'></img>" + "<br/>IQ: "  + krzysztof.Iq + "</button>");
     $buttonKrzysztof.click(function () {
         var message = "Krzysztofie, Twój przyjaciel potrzebuje pomocy. " + questionLevel + " z 12 pytań brzmi: <br>" + q.Content + "<br>";
         if (!($("#answerA").prop("disabled"))) {
@@ -283,7 +285,7 @@ function phoneFriend() {
     });
     $div.append($buttonKrzysztof);
 
-    const $buttonMonika = $("<button>" + "<p>" + monika.name + "<br>IQ: " + monika.Iq + "</button>");
+    const $buttonMonika = $("<button>" + "<img src='images/monika.png' alt='Zdjęcie Moniki'></img>" + "<br/>IQ: "  + monika.Iq + "</button>");
     $buttonMonika.click(function () {
         var message = "Moniko, Twój przyjaciel potrzebuje pomocy. " + questionLevel + " z 12 pytań brzmi: <br>" + q.Content + "<br>";
         if (!($("#answerA").prop("disabled"))) {
@@ -307,7 +309,7 @@ function phoneFriend() {
     });
     $div.append($buttonMonika);
 
-    const $buttonJakub = $("<button>" + "<p>" + jakub.name + "<br>IQ: " + jakub.Iq + "</button>");
+    const $buttonJakub = $("<button>" + "<img src='images/jakub.png' alt='Zdjęcie Jakuba'></img>" + "<br/>IQ: "  + jakub.Iq + "</button>");
     $buttonJakub.click(function () {
         var message = "Jakubie, Twój przyjaciel potrzebuje pomocy. " + questionLevel + " z 12 pytań brzmi: <br>" + q.Content + "<br>";
         if (!($("#answerA").prop("disabled"))) {

@@ -1,54 +1,229 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta  charset="UTF-8" />  
-		<title>Milionerzy</title>	
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="scripts/game.js"></script>
-		<link href="styles/game.css" type="text/css" rel="stylesheet" />
-	</head>
-	
-	<body>
-		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
-	<header>
-		<h1>Milionerzy</h1>
-	</header>
-		<main>
-			<div id="hostText">
-				<p></p>
-				<div id="chart" style="height: 300px; width: 100%;"></div>
-			</div>
-			<div>
-				<h2 id="questionNumber">Pytanie x</h5>
-				<p id="question">Tak czy nie?</p>
-				<button id="answerA">A</button>
-				<button id="answerB">B</button>
-				<button id="answerC">C</button>
-				<button id="answerD">D</button>
-			</div>
-			<div>
-				<button id="askAudience">Publiczność</button>
-				<button id="fiftyFifty">Pół na pół</button>
-				<button id="phoneFriend">Telefon do przyjaciela</button>
-			</div>
-			<div>
-				<p id="A12">1 000 000 zł</p>
-				<p id="A11">500 000 zł</p>
-				<p id="A10">250 000 zł</p>
-				<p id="A9">125 000 zł</p>
-				<p id="A8">75 000 zł</p>
-				<p id="A7">40 000 zł</p>
-				<p id="A6">20 000 zł</p>
-				<p id="A5">10 000 zł</p>
-				<p id="A4">5000 zł</p>
-				<p id="A3">2000 zł</p>
-				<p id="A2">1000 zł</p>
-				<p id="A1">500 zł</p>
-			</div>
-			<button id="giveUp">Rezygnuję z gry</button>
-		</main>
-		<footer>
 
-		</footer>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<title>Milionerzy</title>
+	<link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="scripts/game.js"></script>
+	<link href="styles/game.css" type="text/css" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
+	<style>
+		html {
+			height: 100%;
+			width: 100%;
+			min-width: 760px;
+		}
+
+		body {
+			height: 100%;
+			width: 100%;
+			background-color: #21209c;
+			margin: 0;
+		}
+
+		.container {
+			width: 100%;
+			margin: 0;
+		}
+
+		h1 {
+			color: #fdb827;
+			font-size: 7em;
+			margin-top: 0;
+			margin-bottom: 80px;
+			text-shadow: 5px 5px 10px #23120b;
+			font-family: 'Didact Gothic';
+		}
+
+		h2 {
+			color: #fdb827;
+			font-size: 4em;
+			text-shadow: 5px 5px 10px #23120b;
+			font-family: 'Didact Gothic';
+		}
+
+
+		.help {
+			height: 80px;
+			width: 80px;
+			border-radius: 15px;
+			color: #23120b;
+			background-color: #fdb827;
+			box-shadow: 5px 5px 10px #23120b;
+			font-family: 'Didact Gothic';
+			border: solid 4px #fdb827;
+			box-shadow: 3px 3px 10px #23120b;
+		}
+
+		.help:hover,
+		.help:focus {
+			transition: 0.7s;
+			background-color: #23120b;
+			color: #fdb827;
+		}
+
+		.help:disabled {
+			background-color: #413c3a;
+			color: #2c2b2a;
+			border: rgb(172, 134, 10);
+		}
+
+		footer {
+			color: #f1f1f1;
+			text-shadow: 2px 2px 5px #23120b;
+			font-family: 'Didact Gothic';
+		}
+
+		#mainSection {
+			margin-top: 30px;
+		}
+
+		#hostText {
+			background-color: #f1f1f1;
+			font-family: 'Didact Gothic';
+			font-size: 2em;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 15px;
+			padding-bottom: 8px;
+			border: solid 4px #fdb827;
+			box-shadow: 3px 3px 10px #23120b;
+		}
+
+		#hostText button {
+			padding: 0;
+			margin-left: 10px;
+			background-color: Transparent;
+			background-repeat: no-repeat;
+			border: none;
+			overflow: hidden;
+			outline: none;
+		}
+
+		#question {
+			background-color: #f1f1f1;
+			font-family: 'Didact Gothic';
+			font-size: 2em;
+			padding-left: 20px;
+			padding-right: 10px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			margin-bottom: 40px;
+			border: solid 4px #fdb827;
+			box-shadow: 3px 3px 10px #23120b;
+		}
+
+		.answButt {
+			border-radius: 15px;
+			color: #23120b;
+			background-color: #fdb827;
+			box-shadow: 5px 5px 10px #23120b;
+			font-family: 'Didact Gothic';
+			border: solid 4px #fdb827;
+			box-shadow: 3px 3px 10px #23120b;
+			font-size: 2em;
+		}
+
+		.answButt:hover,
+		.answButt:focus {
+			transition: 0.7s;
+			background-color: #23120b;
+			color: #fdb827;
+		}
+		#endGameNick {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid flex-fill">
+		<header>
+			<h1 class="text-center justify-content-center">Quizerzy</h1>
+		</header>
+		<div class="row">
+			<div class="col-12">
+				<div id="hostText" class="justify-content-center text-center align-content-center align-items-center">
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div id="chart" style="height: 0px; width: 100%;"></div>
+			</div>
+		</div>
+		<div class="row" id="mainSection">
+			<div class="col-8">
+				<h2 id="questionNumber">Pytanie x</h2>
+				<p id="question">Tak czy nie?</p>
+				<div class="row justify-content-around">
+					<button id="answerA" class="answButt col-5">A</button>
+					<button id="answerB" class="answButt col-5">B</button>
+				</div>
+				<div class="row justify-content-around mt-3">
+					<button id="answerC" class="answButt col-5">C</button>
+					<button id="answerD" class="answButt col-5">D</button>
+				</div>
+			</div>
+			<div class="col-4 justify-content-center">
+				<div class="row text-center justify-content-center">
+					<button class="col-3 help" id="askAudience">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+							class="bi bi-people-fill" viewBox="0 0 16 16">
+							<path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+							<path fill-rule="evenodd"
+								d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+							<path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+						</svg>
+					</button>
+					<button class="col-3 mx-3 help" id="fiftyFifty">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+							class="bi bi-circle-half" viewBox="0 0 16 16">
+							<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+						</svg>
+					</button>
+					<button class="col-3 help" id="phoneFriend">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+							class="bi bi-telephone-fill" viewBox="0 0 16 16">
+							<path fill-rule="evenodd"
+								d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+						</svg>
+					</button>
+				</div>
+				<div class="text-right justify-content-right">
+					<p class="text-right" id="A12">1 000 000 zł</p>
+					<p id="A11">500 000 zł</p>
+					<p id="A10">250 000 zł</p>
+					<p id="A9">125 000 zł</p>
+					<p id="A8">75 000 zł</p>
+					<p id="A7">40 000 zł</p>
+					<p id="A6">20 000 zł</p>
+					<p id="A5">10 000 zł</p>
+					<p id="A4">5000 zł</p>
+					<p id="A3">2000 zł</p>
+					<p id="A2">1000 zł</p>
+					<p id="A1">500 zł</p>
+				</div>
+				<button id="giveUp">Rezygnuję z gry</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<footer class="text-center align-bottom mt-5">
+					By Jakub Wadas & Krzysztof Grzesica
+				</footer>
+			</div>
+		</div>
+	</div>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+</body>
+
 </html>
