@@ -78,7 +78,25 @@ function nextQuestion() {
     clearLifelines();
     $("#A" + questionLevel).addClass("answered");
     questionLevel++;
-    $("#hostText>p").html("Dobra odpowiedź. Oto kolejne pytanie:");
+
+    var hostConfirmText;
+    
+    switch (Math.round(Math.random() * 3)) {
+        case 0:
+            hostConfirmText = "Dobra odpowiedź. Oto kolejne pytanie:";
+            break;
+        case 1:
+            hostConfirmText = "Dobra odpowiedź. Przed Tobą kolejne pytanie:";
+            break;
+        case 2:
+            hostConfirmText = "Świetnie. Następne pytanie brzmi:";
+            break;
+        case 3:
+            hostConfirmText = "Prawidłowa odpowiedź. Oto kolejne pytanie:";
+            break;
+    }
+
+    $("#hostText>p").html(hostConfirmText);
     askQuestion(questions[questionLevel - 1]);
 }
 
