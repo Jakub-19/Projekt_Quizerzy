@@ -16,6 +16,8 @@ window.addEventListener('load', function () {
         }
     })
 
+    $('[data-toggle="tooltip"]').tooltip()
+
     $("#answerA").on('click', answer);
     $("#answerB").on('click', answer);
     $("#answerC").on('click', answer);
@@ -78,7 +80,6 @@ function nextQuestion() {
     clearLifelines();
     $("#A" + questionLevel).addClass("answered");
     questionLevel++;
-    $("#questionNumber").focus();
     $("#hostText>p").html("Dobra odpowiedź. Oto kolejne pytanie:");
     askQuestion(questions[questionLevel - 1]);
 }
