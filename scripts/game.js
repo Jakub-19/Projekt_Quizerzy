@@ -6,11 +6,11 @@ window.addEventListener('load', function () {
         url: "scripts/getQuestions.php",
         type: "GET",
         async: false,
-        success: function(result){
+        success: function (result) {
             console.log("Questions downloaded from server");
             questions = result;
         },
-        error: function(error){
+        error: function (error) {
             console.log("Error");
             console.log(error);
         }
@@ -260,7 +260,7 @@ function phoneFriend() {
     const $div = $("#hostText");
 
     const $buttonKrzysztof = $("<button>" + "<p>" + krzysztof.name + "<br>IQ: " + krzysztof.Iq + "</button>");
-    $buttonKrzysztof.click(function () { 
+    $buttonKrzysztof.click(function () {
         var message = "Krzysztofie, Twój przyjaciel potrzebuje pomocy. " + questionLevel + " z 12 pytań brzmi: <br>" + q.Content + "<br>";
         if (!($("#answerA").prop("disabled"))) {
             message += "A: " + q.A.Content + ", ";
@@ -284,7 +284,7 @@ function phoneFriend() {
     $div.append($buttonKrzysztof);
 
     const $buttonMonika = $("<button>" + "<p>" + monika.name + "<br>IQ: " + monika.Iq + "</button>");
-    $buttonMonika.click(function () { 
+    $buttonMonika.click(function () {
         var message = "Moniko, Twój przyjaciel potrzebuje pomocy. " + questionLevel + " z 12 pytań brzmi: <br>" + q.Content + "<br>";
         if (!($("#answerA").prop("disabled"))) {
             message += "A: " + q.A.Content + ", ";
@@ -308,7 +308,7 @@ function phoneFriend() {
     $div.append($buttonMonika);
 
     const $buttonJakub = $("<button>" + "<p>" + jakub.name + "<br>IQ: " + jakub.Iq + "</button>");
-    $buttonJakub.click(function () { 
+    $buttonJakub.click(function () {
         var message = "Jakubie, Twój przyjaciel potrzebuje pomocy. " + questionLevel + " z 12 pytań brzmi: <br>" + q.Content + "<br>";
         if (!($("#answerA").prop("disabled"))) {
             message += "A: " + q.A.Content + ", ";
@@ -382,10 +382,27 @@ function askAudience() {
 
     $("#hostText>p").html("Publiczność udzieliła następujących odpowiedzi:");
 
-    //
+    var chartData = [];
+
     for (let i = 0; i < answers.length; i++) {
         console.log(answers[i] + ": " + votes[i] / 10 + "%");
+        chartData.push({ label: answers[i], y: (votes[i] / 10) });
     }
+
+    var chart = new CanvasJS.Chart("chart", {
+        theme: "dark2",
+        animationEnabled: true,	
+        title: {
+            text: "Głosy publiczności"
+        },
+        data: [
+            {
+                type: "column",
+                dataPoints: chartData
+            }
+        ]
+    });
+    chart.render();
 }
 
 function clearLifelines() {
