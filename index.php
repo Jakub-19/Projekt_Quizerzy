@@ -6,70 +6,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>		
-	<style>
-		html {
-			height: 100%;
-		}
-		body {
-			height: 100%;
-			background-color: #21209c;
-			margin: 0;
-		}
-		h1 {
-			color: #fdb827;
-			font-size: 7em;
-			margin-bottom: 80px;
-			text-shadow: 5px 5px 10px #23120b;
-			font-family: 'Didact Gothic';
-		}
-
-		h3 {
-			color: #fdb827;
-			font-size: 4em;
-			text-shadow: 5px 5px 10px #23120b;
-			margin-bottom: 30px;
-			font-family: 'Didact Gothic';
-		}
-		#playBtn {
-			width: 5em;
-			height: 2em;
-			color: #23120b;
-			background-color: #fdb827;
-			font-size: 3em;
-			margin-bottom: 80px;
-			box-shadow: 5px 5px 10px #23120b;
-			font-family: 'Didact Gothic';
-		}
-		#playBtn:hover, #playBtn:focus {
-			transition: 0.8s;
-			background-color:#23120b;
-			color: #fdb827;
-		}
-		footer {
-			color: #f1f1f1;
-			text-shadow: 2px 2px 5px #23120b;
-			font-family: 'Didact Gothic';
-		}
-		table {
-			background-color: #f1f1f1;
-			border-radius: 15px;
-			font-size: 1.5em;
-			font-family: 'Didact Gothic';
-		}
-		td {
-			border-top: 1px solid black;
-		}
-		tr td:first-child {
-			border-right: 1px solid black;
-		}
-		th:first-child {
-			border-top-left-radius: 15px;
-		}
-		th + th{
-			border-top-right-radius: 15px;
-		}
-	</style>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+		<link href="styles/index.css" type="text/css" rel="stylesheet" />
 		</head>
 	
 	<body>

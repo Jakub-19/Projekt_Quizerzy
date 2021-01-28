@@ -2,204 +2,20 @@
 <html>
 
 <head>
+
 	<meta charset="UTF-8" />
 	<title>Milionerzy</title>
 	<link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="scripts/game.js"></script>
-	<link href="styles/game.css" type="text/css" rel="stylesheet" />
+
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 		crossorigin="anonymous"></script>
-	<style>
-		html {
-			height: 100%;
-			width: 100%;
-			min-width: 820px;
-		}
-
-		body {
-			height: 100%;
-			width: 100%;
-			background-color: #21209c;
-			margin: 0;
-		}
-
-		.container {
-			width: 100%;
-			margin: 0;
-		}
-
-		h1 {
-			color: #fdb827;
-			font-size: 7em;
-			margin-top: 0;
-			margin-bottom: 80px;
-			text-shadow: 5px 5px 10px #23120b;
-			font-family: 'Didact Gothic';
-		}
-
-		h2 {
-			color: #fdb827;
-			font-size: 4em;
-			text-shadow: 5px 5px 10px #23120b;
-			font-family: 'Didact Gothic';
-		}
-
-
-		.help {
-			height: 80px;
-			width: 80px;
-			border-radius: 15px;
-			color: #23120b;
-			background-color: #fdb827;
-			box-shadow: 5px 5px 10px #23120b;
-			font-family: 'Didact Gothic';
-			border: solid 4px #fdb827;
-			box-shadow: 3px 3px 10px #23120b;
-			margin-bottom: 20px;
-		}
-
-		.help:hover,
-		.help:focus {
-			transition: 0.7s;
-			background-color: #23120b;
-			color: #fdb827;
-		}
-
-		.help:disabled {
-			background-color: #413c3a;
-			color: #2c2b2a;
-			border: rgb(172, 134, 10);
-		}
-
-		footer {
-			color: #f1f1f1;
-			text-shadow: 2px 2px 5px #23120b;
-			font-family: 'Didact Gothic';
-		}
-
-		#mainSection {
-			margin-top: 30px;
-		}
-
-		#hostText {
-			background-color: #f1f1f1;
-			font-family: 'Didact Gothic';
-			font-size: 2em;
-			padding-left: 10px;
-			padding-right: 10px;
-			padding-top: 15px;
-			padding-bottom: 8px;
-			border: solid 4px #fdb827;
-			box-shadow: 3px 3px 10px #23120b;
-		}
-
-		#hostText button {
-			padding: 0;
-			margin-left: 10px;
-			background-color: Transparent;
-			background-repeat: no-repeat;
-			border: none;
-			overflow: hidden;
-			outline: none;
-		}
-
-		#question {
-			background-color: #f1f1f1;
-			font-family: 'Didact Gothic';
-			font-size: 2em;
-			padding-left: 20px;
-			padding-right: 10px;
-			padding-top: 8px;
-			padding-bottom: 8px;
-			margin-bottom: 40px;
-			border: solid 4px #fdb827;
-			box-shadow: 3px 3px 10px #23120b;
-		}
-
-		.answButt {
-			border-radius: 15px;
-			color: #23120b;
-			background-color: #fdb827;
-			box-shadow: 5px 5px 10px #23120b;
-			font-family: 'Didact Gothic';
-			border: solid 4px #fdb827;
-			box-shadow: 3px 3px 10px #23120b;
-			font-size: 1.5em;
-		}
-
-		.answButt:hover {
-			transition: 0.7s;
-			background-color: #23120b;
-			color: #fdb827;
-		}
-
-		.answButt:focus {
-			outline: none;
-		}
-
-		.answButt:disabled {
-			background-color: #413c3a;
-			color: #2c2b2a;
-			border: rgb(172, 134, 10);
-		}
-
-		#endGameNick {
-			margin-left: 5px;
-			margin-right: 5px;
-		}
-
-		.money p {
-			width: 14em;
-			border-radius: 15px;
-			margin-left: 30px;
-			margin-right: 30px;
-			background-color: #470909;
-			color: #f1f1f1;
-			text-shadow: 2px 2px 5px #23120b;
-			box-shadow: 2px 2px 5px #23120b;
-			font-family: 'Didact Gothic';
-			font-size: 1.3em;
-		}
-		p.answered {
-			font-weight: bold;
-			background-color: #a11010;
-		}
-		#A2, #A7 {
-			background-color: #0c380b;
-		}
-		#A2.answered, #A7.answered {
-			background-color: #0f6822;
-		}
-		
-		#giveUp {
-			width: 200px;
-			border-radius: 15px;
-			color: #23120b;
-			background-color: #fdb827;
-			box-shadow: 5px 5px 10px #23120b;
-			font-family: 'Didact Gothic';
-			border: solid 4px #fdb827;
-			box-shadow: 3px 3px 10px #23120b;
-			font-size: 1.5em;
-		}
-		#giveUp:hover {
-			transition: 0.7s;
-			background-color: #23120b;
-			color: #fdb827;
-		}
-		#giveUp:disabled {
-			background-color: #413c3a;
-			color: #2c2b2a;
-			border: rgb(172, 134, 10);
-		}
-		#chart {
-			margin-top: 15px;
-		}
-	</style>
+	<link href="styles/game.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -211,7 +27,7 @@
 			<div class="col-12">
 				<div id="hostText" class="justify-content-center text-center align-content-center align-items-center">
 					<p></p>
-					
+
 				</div>
 			</div>
 		</div>
