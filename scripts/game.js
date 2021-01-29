@@ -413,7 +413,7 @@ function askAudience() {
         theme: "dark2",
         animationEnabled: true,	
         title: {
-            text: "Głosy publiczności"
+            text: "Głosy publiczności [%]"
         },
         data: [
             {
